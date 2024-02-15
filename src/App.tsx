@@ -45,7 +45,7 @@ const App: React.FC = () => { // Définit le composant principal de l'applicatio
         currentColor
       );
       if (!newArray) { // Si le placement du jeton est invalide (par exemple, colonne pleine), affiche une alerte et retourne
-        alert("Impossible de poser un jeton ici");
+        alert("Impossible de poser un jeton ici !");
         return;
       }
       setArray(newArray as string[][]); // Met à jour l'état de la grille avec le nouveau tableau
@@ -74,14 +74,19 @@ const App: React.FC = () => { // Définit le composant principal de l'applicatio
     if (playerHumanTurn || isFinished) { // Si c'est le tour du joueur humain ou que le jeu est terminé, retourne
       return;
     }
-    const column = chooseCorrectly(array); // Choisit intelligemment la colonne où placer le jeton pour l'ordinateur
-    placeToken(column, false); // Place un jeton à la colonne choisie
+
+    const timeoutId = setTimeout(() => {
+      const column = chooseCorrectly(array); // Choisit intelligemment la colonne où placer le jeton pour l'ordinateur
+      placeToken(column, false); // Place un jeton à la colonne choisie
+    }, 2000);
+    return () => clearTimeout(timeoutId)
+    
   }, [playerHumanTurn, placeToken, array, isFinished]);
 
   return ( // Rendu JSX de l'application
     <div className="App"> {/* Conteneur principal de l'application */}
       <h1>Puissance 4</h1> {/* Titre du jeu */}
-      <h2>Choose your destiny</h2> {/* Sous-titre du jeu */}
+      <h2>Choose your destiny !</h2> {/* Sous-titre du jeu */}
       <div style={gameStyle}> {/* Élément de jeu avec les styles définis */}
         <Grille // Composant Grille pour afficher la grille de jeu
           width={tokenSize * 7} // Largeur de la grille en fonction de la taille des jetons et du nombre de colonnes

@@ -2,7 +2,7 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  background-color: rgb(107, 107, 129);
+  background-color: #87CEFA;
 }
 
 .App {
@@ -10,19 +10,23 @@ body {
 }
 
 h1 {
-  color: rgb(136, 216, 189);
-  box-shadow: 6px 8px 6px 0 black;
+  color: whitesmoke;
+  text-decoration: underline whitesmoke;
   border-radius: 8px;
 }
 
 h1:hover {
-  color: white;
+  color: yellow;
+  text-decoration: underline red;
 }
 
 h2 {
-  color: rgb(136, 216, 189);
+  color: whitesmoke;
+  text-decoration: underline whitesmoke;
+  border-radius: 8px;
 }
 
 h2:hover {
-  color: white;
+  color: red;
+  text-decoration: underline yellow;
 }
