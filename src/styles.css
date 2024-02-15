@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(107, 107, 129);
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: rgb(136, 216, 189);
+  box-shadow: 6px 8px 6px 0 black;
+  border-radius: 8px;
+}
+
+h1:hover {
+  color: white;
+}
+
+h2 {
+  color: rgb(136, 216, 189);
+}
+
+h2:hover {
+  color: white;
+}
