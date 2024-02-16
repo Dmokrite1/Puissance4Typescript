@@ -9,7 +9,7 @@ interface TokenProps { // Définit les propriétés attendues par le composant J
   y: number; // Position verticale du jeton
 }
 
-const sizeToken = 50; // Définit la taille du jeton en pixels
+const sizeToken = 100; // Définit la taille du jeton en pixels
 
 const Token: React.FC<TokenProps> = ({ color: color, x, y }) => { // Définit le composant Jeton en fonction des propriétés JetonProps
   const [shownY, setShownY] = useState(y); // Déclare un état pour stocker la position verticale affichée du jeton
